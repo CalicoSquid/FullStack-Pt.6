@@ -1,0 +1,122 @@
+/* index.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.main {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h2 {
+  color: #3498db;
+}
+
+.radio-container {
+  margin-block: 20px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.radio-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+.custom-radio::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.radio-input:checked + .custom-radio::after {
+  display: block;
+}
+
+.notes-container {
+  margin-top: 20px;
+}
+
+.note {
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.create-note-container {
+  margin-top: 20px;
+}
+
+.create-note-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-note-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.create-note-button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-note-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 480px) {
+  .main {
+    padding: 10px;
+  }
+  .create-note-form {
+    flex-direction: column;
+  }
+  .create-note-input {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
